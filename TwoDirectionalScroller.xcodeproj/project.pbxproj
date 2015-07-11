@@ -13,6 +13,8 @@
 		FCC4C7881B51BA41008CD338 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC4C7871B51BA41008CD338 /* Images.xcassets */; };
 		FCC4C78B1B51BA41008CD338 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC4C7891B51BA41008CD338 /* LaunchScreen.xib */; };
 		FCC4C7971B51BA41008CD338 /* TwoDirectionalScrollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC4C7961B51BA41008CD338 /* TwoDirectionalScrollerTests.swift */; };
+		FCC4C7A11B51BAC4008CD338 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC4C7A01B51BAC4008CD338 /* CategoryRow.swift */; };
+		FCC4C7A31B51BBF0008CD338 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC4C7A21B51BBF0008CD338 /* VideoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		FCC4C7901B51BA41008CD338 /* TwoDirectionalScrollerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwoDirectionalScrollerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC4C7951B51BA41008CD338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC4C7961B51BA41008CD338 /* TwoDirectionalScrollerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoDirectionalScrollerTests.swift; sourceTree = "<group>"; };
+		FCC4C7A01B51BAC4008CD338 /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
+		FCC4C7A21B51BBF0008CD338 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				FCC4C7801B51BA41008CD338 /* AppDelegate.swift */,
 				FCC4C7821B51BA41008CD338 /* ViewController.swift */,
+				FCC4C7A01B51BAC4008CD338 /* CategoryRow.swift */,
+				FCC4C7A21B51BBF0008CD338 /* VideoCell.swift */,
 				FCC4C7841B51BA41008CD338 /* Main.storyboard */,
 				FCC4C7871B51BA41008CD338 /* Images.xcassets */,
 				FCC4C7891B51BA41008CD338 /* LaunchScreen.xib */,
@@ -213,6 +219,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC4C7831B51BA41008CD338 /* ViewController.swift in Sources */,
+				FCC4C7A31B51BBF0008CD338 /* VideoCell.swift in Sources */,
+				FCC4C7A11B51BAC4008CD338 /* CategoryRow.swift in Sources */,
 				FCC4C7811B51BA41008CD338 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

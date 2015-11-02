@@ -15,7 +15,10 @@ class HeaderCell : UITableViewCell {
     var name = "" {
         didSet {
             headerLabel.text = name
+
         }
     }
+
     
 }
+

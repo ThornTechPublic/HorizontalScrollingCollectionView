@@ -10,5 +10,7 @@ import UIKit
 
 class VideoCell : UICollectionViewCell {
     
+    var categoryName:String? = nil
+
     @IBOutlet weak var imageView: UIImageView!
 }

@@ -39,7 +39,7 @@ extension ViewController : UITableViewDelegate {
             // one way to get around this is to brute-force it:
             // get the rectangular area of each table section header,
             // and then see if the tapped point fits inside.
-            for i in 0..<categories.count {
+            for i in 0..<tableView.numberOfSections {
                 let sectionHeaderArea = tableView.rectForHeaderInSection(i)
                 if CGRectContainsPoint(sectionHeaderArea, tappedPoint) {
                     print("tapped on category:: \(categories[i])")
@@ -66,6 +66,7 @@ extension ViewController : UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! CategoryRow
+        cell.categoryName = categories[indexPath.section]
         return cell
     }
     

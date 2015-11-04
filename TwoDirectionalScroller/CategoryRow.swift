@@ -9,6 +9,9 @@
 import UIKit
 
 class CategoryRow : UITableViewCell {
+    
+    var categoryName:String? = nil
+    
     @IBOutlet weak var collectionView: UICollectionView!
 }
 
@@ -20,6 +23,7 @@ extension CategoryRow : UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("videoCell", forIndexPath: indexPath) as! VideoCell
+        cell.categoryName = categoryName
         return cell
     }
     
@@ -33,6 +37,16 @@ extension CategoryRow : UICollectionViewDelegateFlowLayout {
         let itemWidth = (collectionView.bounds.width / itemsPerRow) - hardCodedPadding
         let itemHeight = collectionView.bounds.height - (2 * hardCodedPadding)
         return CGSize(width: itemWidth, height: itemHeight)
+    }
+    
+}
+
+extension CategoryRow : UICollectionViewDelegate {
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        if let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as? VideoCell {
+            print("selected cell from category: \(selectedCell.categoryName)")
+        }
     }
     
 }

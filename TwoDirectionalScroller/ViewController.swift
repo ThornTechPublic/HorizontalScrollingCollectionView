@@ -1,9 +1,20 @@
 import UIKit
 
+protocol ShowDetailDelegate {
+    func showDetail(displayText:String)
+}
+
 class ViewController: UIViewController {
     var categories = ["Action", "Drama", "Science Fiction", "Kids", "Horror"]
         
     @IBOutlet weak var tableView: UITableView!
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let detailPage = segue.destinationViewController as? DetailPage,
+        let displayString = sender as? String {
+            detailPage.displayString = displayString
+        }
+    }
 }
 
 extension ViewController : UITableViewDelegate {
@@ -67,6 +78,7 @@ extension ViewController : UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! CategoryRow
         cell.categoryName = categories[indexPath.section]
+        cell.showDetailDelegate = self
         return cell
     }
     
@@ -74,3 +86,9 @@ extension ViewController : UITableViewDataSource {
 
 // Had to add this, even though it doesn't do anything.
 extension ViewController : UIGestureRecognizerDelegate { }
+
+extension ViewController : ShowDetailDelegate {
+    func showDetail(displayText:String){
+        performSegueWithIdentifier("ShowDetail", sender: displayText)
+    }
+}

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kg5-hN-dlv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kg5-hN-dlv">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -134,11 +134,48 @@
                     <navigationItem key="navigationItem" title="Videos" id="RKR-KW-iRB"/>
                     <connections>
                         <outlet property="tableView" destination="J3n-Kk-1Hb" id="cFn-mM-mfF"/>
+                        <segue destination="EoG-B3-FW7" kind="show" identifier="ShowDetail" id="ZJl-54-Dv1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1117" y="372"/>
+        </scene>
+        <!--Detail Page-->
+        <scene sceneID="yIm-d2-zVI">
+            <objects>
+                <viewController id="EoG-B3-FW7" customClass="DetailPage" customModule="TwoDirectionalScroller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9mI-vT-JTs"/>
+                        <viewControllerLayoutGuide type="bottom" id="fQu-sK-2Ng"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8z9-Hz-kSE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZm-Pc-cIn">
+                                <rect key="frame" x="20" y="102" width="560" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oZm-Pc-cIn" firstAttribute="top" secondItem="9mI-vT-JTs" secondAttribute="bottom" constant="38" id="LPD-9z-z2C"/>
+                            <constraint firstItem="oZm-Pc-cIn" firstAttribute="leading" secondItem="8z9-Hz-kSE" secondAttribute="leadingMargin" id="cS1-jM-6hs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oZm-Pc-cIn" secondAttribute="trailing" id="lYm-Cm-pa8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="oZm-Pc-cIn" id="dbW-SH-kkk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XJg-13-vkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1851" y="384"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1OO-bF-N90">

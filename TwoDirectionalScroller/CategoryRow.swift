@@ -12,6 +12,8 @@ class CategoryRow : UITableViewCell {
     
     var categoryName:String? = nil
     
+    var showDetailDelegate:ShowDetailDelegate? = nil
+    
     @IBOutlet weak var collectionView: UICollectionView!
 }
 
@@ -45,7 +47,9 @@ extension CategoryRow : UICollectionViewDelegate {
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         if let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as? VideoCell {
-            print("selected cell from category: \(selectedCell.categoryName)")
+            let displayText = "selected cell number: \(indexPath.row) from category: \(selectedCell.categoryName)"
+            showDetailDelegate?.showDetail(displayText)
+//            print("selected cell from category: \(selectedCell.categoryName)")
         }
     }
     

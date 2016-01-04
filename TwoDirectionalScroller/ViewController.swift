@@ -9,11 +9,11 @@ extension ViewController : UITableViewDelegate { }
 extension ViewController : UITableViewDataSource {
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return categories[section]
+        return VideoModel.sharedInstance.categories[section].name
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return categories.count
+        return VideoModel.sharedInstance.categories.count//categories.count
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -22,6 +22,7 @@ extension ViewController : UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! CategoryRow
+        cell.category = VideoModel.sharedInstance.categories[indexPath.section]
         return cell
     }
     

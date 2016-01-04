@@ -10,12 +10,13 @@ import UIKit
 
 class CategoryRow : UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
+    var category:Category? = nil
 }
 
 extension CategoryRow : UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return category!.videos.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

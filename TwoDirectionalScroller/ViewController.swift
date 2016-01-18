@@ -22,6 +22,7 @@ extension ViewController : UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! CategoryRow
+        cell.backgroundColor = (categories[indexPath.section] == "Horror") ? .redColor() : .blackColor()
         return cell
     }
     

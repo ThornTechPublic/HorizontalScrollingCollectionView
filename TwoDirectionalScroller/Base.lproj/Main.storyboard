@@ -30,6 +30,7 @@
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="y6Z-Go-iEa">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="144.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Fim-ZI-jnO">
                                                         <size key="itemSize" width="109" height="134.5"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -50,7 +51,7 @@
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </view>
-                                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstItem="mwh-65-WbZ" firstAttribute="top" secondItem="IcT-bT-7wj" secondAttribute="top" id="B4G-bi-8YB"/>
                                                                 <constraint firstItem="mwh-65-WbZ" firstAttribute="leading" secondItem="IcT-bT-7wj" secondAttribute="leading" id="Qxe-3L-S2h"/>

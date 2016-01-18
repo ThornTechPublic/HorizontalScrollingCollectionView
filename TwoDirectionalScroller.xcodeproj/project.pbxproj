@@ -162,6 +162,7 @@
 		FCC4C7731B51BA41008CD338 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Thorn Technologies";
 				TargetAttributes = {
@@ -419,6 +420,7 @@
 				FCC4C79C1B51BA41008CD338 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCC4C79D1B51BA41008CD338 /* Build configuration list for PBXNativeTarget "TwoDirectionalScrollerTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +429,7 @@
 				FCC4C79F1B51BA41008CD338 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

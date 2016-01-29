@@ -15,6 +15,8 @@
 		FCC4C7971B51BA41008CD338 /* TwoDirectionalScrollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC4C7961B51BA41008CD338 /* TwoDirectionalScrollerTests.swift */; };
 		FCC4C7A11B51BAC4008CD338 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC4C7A01B51BAC4008CD338 /* CategoryRow.swift */; };
 		FCC4C7A31B51BBF0008CD338 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC4C7A21B51BBF0008CD338 /* VideoCell.swift */; };
+		FCD2402B1C5BBDB500B2F4A1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD240291C5BBDB500B2F4A1 /* Alamofire.framework */; };
+		FCD2402C1C5BBDB500B2F4A1 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD2402A1C5BBDB500B2F4A1 /* AlamofireImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		FCC4C7961B51BA41008CD338 /* TwoDirectionalScrollerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoDirectionalScrollerTests.swift; sourceTree = "<group>"; };
 		FCC4C7A01B51BAC4008CD338 /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		FCC4C7A21B51BBF0008CD338 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		FCD240291C5BBDB500B2F4A1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		FCD2402A1C5BBDB500B2F4A1 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD2402B1C5BBDB500B2F4A1 /* Alamofire.framework in Frameworks */,
+				FCD2402C1C5BBDB500B2F4A1 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,8 @@
 		FCC4C77D1B51BA41008CD338 /* TwoDirectionalScroller */ = {
 			isa = PBXGroup;
 			children = (
+				FCD240291C5BBDB500B2F4A1 /* Alamofire.framework */,
+				FCD2402A1C5BBDB500B2F4A1 /* AlamofireImage.framework */,
 				FCC4C7801B51BA41008CD338 /* AppDelegate.swift */,
 				FCC4C7821B51BA41008CD338 /* ViewController.swift */,
 				FCC4C7A01B51BAC4008CD338 /* CategoryRow.swift */,
@@ -351,6 +359,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TwoDirectionalScroller",
+				);
 				INFOPLIST_FILE = TwoDirectionalScroller/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -361,6 +373,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TwoDirectionalScroller",
+				);
 				INFOPLIST_FILE = TwoDirectionalScroller/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

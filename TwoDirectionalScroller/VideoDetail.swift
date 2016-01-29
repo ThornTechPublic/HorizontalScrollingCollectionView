@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class VideoDetail : UIViewController {
     var movie:Movie? = nil

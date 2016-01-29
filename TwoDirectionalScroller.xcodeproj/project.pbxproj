@@ -17,7 +17,6 @@
 		FCC4C7A31B51BBF0008CD338 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC4C7A21B51BBF0008CD338 /* VideoCell.swift */; };
 		FCD2402B1C5BBDB500B2F4A1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD240291C5BBDB500B2F4A1 /* Alamofire.framework */; };
 		FCD2402C1C5BBDB500B2F4A1 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD2402A1C5BBDB500B2F4A1 /* AlamofireImage.framework */; };
-		FCD240341C5BBEC100B2F4A1 /* RouterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD240331C5BBEC100B2F4A1 /* RouterService.swift */; };
 		FCD240391C5BC25F00B2F4A1 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD240381C5BC25F00B2F4A1 /* Movie.swift */; };
 		FCD2403A1C5BC4DA00B2F4A1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD240291C5BBDB500B2F4A1 /* Alamofire.framework */; };
 		FCD2403B1C5BC4DA00B2F4A1 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCD240291C5BBDB500B2F4A1 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -72,7 +71,6 @@
 		FCC4C7A21B51BBF0008CD338 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		FCD240291C5BBDB500B2F4A1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		FCD2402A1C5BBDB500B2F4A1 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = "<group>"; };
-		FCD240331C5BBEC100B2F4A1 /* RouterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterService.swift; sourceTree = "<group>"; };
 		FCD240381C5BC25F00B2F4A1 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		FCD2403F1C5BC99700B2F4A1 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
 		FCD240431C5BCB1200B2F4A1 /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 				FCC4C7821B51BA41008CD338 /* ViewController.swift */,
 				FCC4C7A01B51BAC4008CD338 /* CategoryRow.swift */,
 				FCC4C7A21B51BBF0008CD338 /* VideoCell.swift */,
-				FCD240331C5BBEC100B2F4A1 /* RouterService.swift */,
 				FCD240381C5BC25F00B2F4A1 /* Movie.swift */,
 				FCD240431C5BCB1200B2F4A1 /* Genre.swift */,
 				FCD240451C5BCB6D00B2F4A1 /* Catalog.swift */,
@@ -273,7 +270,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC4C7831B51BA41008CD338 /* ViewController.swift in Sources */,
-				FCD240341C5BBEC100B2F4A1 /* RouterService.swift in Sources */,
 				FCD240391C5BC25F00B2F4A1 /* Movie.swift in Sources */,
 				FCD240461C5BCB6D00B2F4A1 /* Catalog.swift in Sources */,
 				FCD240481C5BE4EE00B2F4A1 /* VideoDetail.swift in Sources */,

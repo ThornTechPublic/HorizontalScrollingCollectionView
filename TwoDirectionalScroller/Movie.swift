@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import AlamofireImage
+import SwiftyJSON
 
 class Movie {
     var name:String
@@ -16,14 +16,24 @@ class Movie {
     var movieDescription:String
     
     func updateImageURL(){
-        RouterService.sharedInstance.fetchMovie(name) { success, movie in
-            guard let movie = movie where success else {
-                return
+        let parameters:[String: AnyObject] = [
+            "t": name,
+            "y": "",
+            "plot": "short",
+            "r": "json"
+        ]
+        let omdbAPI = "https://www.omdbapi.com/"
+        let URL = NSURL(string: omdbAPI)!
+        let URLRequest = NSMutableURLRequest(URL: URL)
+        URLRequest.HTTPMethod = "GET"
+        request(ParameterEncoding.URL.encode(URLRequest, parameters: parameters).0)
+            .responseJSON() { response in
+                guard let dataValue = response.result.value else { return }
+                let json = JSON(dataValue)
+                self.imageURL = json["Poster"].stringValue
+                self.name = json["Title"].stringValue
+                self.movieDescription = json["Plot"].stringValue
             }
-            self.imageURL = movie.imageURL
-            self.name = movie.name
-            self.movieDescription = movie.movieDescription
-        }
     }
 
     // Created model without imageURL, so need to fetch it.

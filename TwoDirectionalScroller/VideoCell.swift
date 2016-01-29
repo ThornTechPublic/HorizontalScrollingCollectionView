@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Alamofire
-import AlamofireImage
 
 class VideoCell : UICollectionViewCell {
     
@@ -22,4 +20,5 @@ class VideoCell : UICollectionViewCell {
             }
         }
     }
+
 }

@@ -15,27 +15,6 @@ class RouterService : NSObject {
     static let sharedInstance = RouterService()
     
     static let omdbAPI = "https://www.omdbapi.com/"
-
-    enum Router: URLRequestConvertible {
-        
-        // define Router calls and input parameter types
-        case FetchMovie(params: [String: AnyObject])
-        var URLRequest: NSMutableURLRequest {
-            // generate HTTP verbs, URL paths, and parameters
-            let (verb, path, parameters): (Alamofire.Method, String, [String: AnyObject]?) = {
-                switch self {
-                case .FetchMovie(let params):
-                    return (.GET, omdbAPI, params)
-                }
-            }()
-            let URL = NSURL(string: path)!
-            let URLRequest = NSMutableURLRequest(URL: URL)
-            URLRequest.HTTPMethod = verb.rawValue
-            URLRequest.cachePolicy = .ReloadIgnoringLocalCacheData
-            
-            return ParameterEncoding.URL.encode(URLRequest, parameters: parameters).0
-        }
-    }
     
     func fetchMovie(title: String, callback: (Bool, Movie?) -> Void) {
         let parameters:[String: AnyObject] = [
@@ -44,7 +23,11 @@ class RouterService : NSObject {
             "plot": "short",
             "r": "json"
         ]
-        request(Router.FetchMovie(params: parameters))
+        let omdbAPI = "https://www.omdbapi.com/"
+        let URL = NSURL(string: omdbAPI)!
+        let URLRequest = NSMutableURLRequest(URL: URL)
+        URLRequest.HTTPMethod = "GET"
+        request(ParameterEncoding.URL.encode(URLRequest, parameters: parameters).0)
             .responseJSON() { response in
                 guard let dataValue = response.result.value else {
                     callback( false, nil )

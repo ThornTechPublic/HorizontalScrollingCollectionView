@@ -43,11 +43,4 @@ class Movie {
         self.movieDescription = ""
         updateImageURL()
     }
-    
-    // Supplying imageURL, so assuming a valid URL is supplied.
-    init(name: String, imageURL: String, movieDescription: String){
-        self.name = name
-        self.imageURL = imageURL
-        self.movieDescription = movieDescription
-    }
 }

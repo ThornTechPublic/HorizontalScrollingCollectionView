@@ -10,9 +10,7 @@ import UIKit
 import AlamofireImage
 
 class VideoCell : UICollectionViewCell {
-    
     @IBOutlet weak var imageView: UIImageView!
-    
     var movie:Movie? = nil {
         didSet {
             if let movie = movie,
@@ -21,5 +19,4 @@ class VideoCell : UICollectionViewCell {
             }
         }
     }
-
 }

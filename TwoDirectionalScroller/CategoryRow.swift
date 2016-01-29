@@ -10,16 +10,24 @@ import UIKit
 
 class CategoryRow : UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
+    var genre:Genre? = nil {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
 }
 
 extension CategoryRow : UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return genre!.movies.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("videoCell", forIndexPath: indexPath) as! VideoCell
+        if let genre = genre {
+            cell.movie = genre.movies[indexPath.row]
+        }
         return cell
     }
     

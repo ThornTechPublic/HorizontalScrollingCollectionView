@@ -1,12 +1,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var categories = ["Action", "Drama", "Science Fiction", "Kids", "Horror"]
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    func delay(seconds seconds: Double, completion:()->()) {
+        let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64( Double(NSEC_PER_SEC) * seconds ))
+        dispatch_after(popTime, dispatch_get_main_queue()) {
+            completion()
+        }
+    }
     
     override func viewDidLoad() {
-        RouterService.sharedInstance.fetchMovie("wall e") { success, movie in
-            guard let movie = movie where success else { return }
-            print("movie: \(movie)")
+        delay(seconds: 1.0){
+            self.tableView.reloadData()
         }
     }
 }
@@ -16,11 +23,11 @@ extension ViewController : UITableViewDelegate { }
 extension ViewController : UITableViewDataSource {
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return categories[section]
+        return Catalog.sharedInstance.genres[section].name
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return categories.count
+        return Catalog.sharedInstance.genres.count
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,6 +36,7 @@ extension ViewController : UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! CategoryRow
+        cell.genre = Catalog.sharedInstance.genres[indexPath.section]
         return cell
     }
     

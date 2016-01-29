@@ -95,6 +95,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Videos" id="RKR-KW-iRB"/>
+                    <connections>
+                        <outlet property="tableView" destination="J3n-Kk-1Hb" id="dPk-pd-GfZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

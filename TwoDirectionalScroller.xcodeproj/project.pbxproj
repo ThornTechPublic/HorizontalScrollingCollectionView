@@ -17,6 +17,12 @@
 		FCC4C7A31B51BBF0008CD338 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC4C7A21B51BBF0008CD338 /* VideoCell.swift */; };
 		FCD2402B1C5BBDB500B2F4A1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD240291C5BBDB500B2F4A1 /* Alamofire.framework */; };
 		FCD2402C1C5BBDB500B2F4A1 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD2402A1C5BBDB500B2F4A1 /* AlamofireImage.framework */; };
+		FCD240341C5BBEC100B2F4A1 /* RouterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD240331C5BBEC100B2F4A1 /* RouterService.swift */; };
+		FCD240391C5BC25F00B2F4A1 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD240381C5BC25F00B2F4A1 /* Movie.swift */; };
+		FCD2403A1C5BC4DA00B2F4A1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD240291C5BBDB500B2F4A1 /* Alamofire.framework */; };
+		FCD2403B1C5BC4DA00B2F4A1 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCD240291C5BBDB500B2F4A1 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FCD2403D1C5BC4F800B2F4A1 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD2402A1C5BBDB500B2F4A1 /* AlamofireImage.framework */; };
+		FCD2403E1C5BC4F800B2F4A1 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCD2402A1C5BBDB500B2F4A1 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +34,21 @@
 			remoteInfo = TwoDirectionalScroller;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FCD2403C1C5BC4DB00B2F4A1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FCD2403B1C5BC4DA00B2F4A1 /* Alamofire.framework in Embed Frameworks */,
+				FCD2403E1C5BC4F800B2F4A1 /* AlamofireImage.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FCC4C77B1B51BA41008CD338 /* TwoDirectionalScroller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoDirectionalScroller.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +65,8 @@
 		FCC4C7A21B51BBF0008CD338 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		FCD240291C5BBDB500B2F4A1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		FCD2402A1C5BBDB500B2F4A1 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = "<group>"; };
+		FCD240331C5BBEC100B2F4A1 /* RouterService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterService.swift; sourceTree = "<group>"; };
+		FCD240381C5BC25F00B2F4A1 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +75,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCD2402B1C5BBDB500B2F4A1 /* Alamofire.framework in Frameworks */,
+				FCD2403A1C5BC4DA00B2F4A1 /* Alamofire.framework in Frameworks */,
 				FCD2402C1C5BBDB500B2F4A1 /* AlamofireImage.framework in Frameworks */,
+				FCD2403D1C5BC4F800B2F4A1 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +118,8 @@
 				FCC4C7821B51BA41008CD338 /* ViewController.swift */,
 				FCC4C7A01B51BAC4008CD338 /* CategoryRow.swift */,
 				FCC4C7A21B51BBF0008CD338 /* VideoCell.swift */,
+				FCD240331C5BBEC100B2F4A1 /* RouterService.swift */,
+				FCD240381C5BC25F00B2F4A1 /* Movie.swift */,
 				FCC4C7841B51BA41008CD338 /* Main.storyboard */,
 				FCC4C7871B51BA41008CD338 /* Images.xcassets */,
 				FCC4C7891B51BA41008CD338 /* LaunchScreen.xib */,
@@ -136,6 +163,7 @@
 				FCC4C7771B51BA41008CD338 /* Sources */,
 				FCC4C7781B51BA41008CD338 /* Frameworks */,
 				FCC4C7791B51BA41008CD338 /* Resources */,
+				FCD2403C1C5BC4DB00B2F4A1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -228,6 +256,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC4C7831B51BA41008CD338 /* ViewController.swift in Sources */,
+				FCD240341C5BBEC100B2F4A1 /* RouterService.swift in Sources */,
+				FCD240391C5BC25F00B2F4A1 /* Movie.swift in Sources */,
 				FCC4C7A31B51BBF0008CD338 /* VideoCell.swift in Sources */,
 				FCC4C7A11B51BAC4008CD338 /* CategoryRow.swift in Sources */,
 				FCC4C7811B51BA41008CD338 /* AppDelegate.swift in Sources */,

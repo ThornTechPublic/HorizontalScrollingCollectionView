@@ -2,6 +2,13 @@ import UIKit
 
 class ViewController: UIViewController {
     var categories = ["Action", "Drama", "Science Fiction", "Kids", "Horror"]
+    
+    override func viewDidLoad() {
+        RouterService.sharedInstance.fetchMovie("wall e") { success, movie in
+            guard let movie = movie where success else { return }
+            print("movie: \(movie)")
+        }
+    }
 }
 
 extension ViewController : UITableViewDelegate { }

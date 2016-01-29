@@ -28,6 +28,7 @@
 		FCD240421C5BC9B300B2F4A1 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCD2403F1C5BC99700B2F4A1 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FCD240441C5BCB1200B2F4A1 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD240431C5BCB1200B2F4A1 /* Genre.swift */; };
 		FCD240461C5BCB6D00B2F4A1 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD240451C5BCB6D00B2F4A1 /* Catalog.swift */; };
+		FCD240481C5BE4EE00B2F4A1 /* VideoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD240471C5BE4EE00B2F4A1 /* VideoDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		FCD2403F1C5BC99700B2F4A1 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
 		FCD240431C5BCB1200B2F4A1 /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		FCD240451C5BCB6D00B2F4A1 /* Catalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
+		FCD240471C5BE4EE00B2F4A1 /* VideoDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				FCD240381C5BC25F00B2F4A1 /* Movie.swift */,
 				FCD240431C5BCB1200B2F4A1 /* Genre.swift */,
 				FCD240451C5BCB6D00B2F4A1 /* Catalog.swift */,
+				FCD240471C5BE4EE00B2F4A1 /* VideoDetail.swift */,
 				FCC4C7841B51BA41008CD338 /* Main.storyboard */,
 				FCC4C7871B51BA41008CD338 /* Images.xcassets */,
 				FCC4C7891B51BA41008CD338 /* LaunchScreen.xib */,
@@ -273,6 +276,7 @@
 				FCD240341C5BBEC100B2F4A1 /* RouterService.swift in Sources */,
 				FCD240391C5BC25F00B2F4A1 /* Movie.swift in Sources */,
 				FCD240461C5BCB6D00B2F4A1 /* Catalog.swift in Sources */,
+				FCD240481C5BE4EE00B2F4A1 /* VideoDetail.swift in Sources */,
 				FCC4C7A31B51BBF0008CD338 /* VideoCell.swift in Sources */,
 				FCC4C7A11B51BAC4008CD338 /* CategoryRow.swift in Sources */,
 				FCC4C7811B51BA41008CD338 /* AppDelegate.swift in Sources */,

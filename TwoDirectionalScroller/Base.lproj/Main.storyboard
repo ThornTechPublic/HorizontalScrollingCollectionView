@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Videos-->
@@ -59,6 +61,7 @@
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="imageView" destination="mwh-65-WbZ" id="HZH-sR-eqL"/>
+                                                                <segue destination="lDM-2k-zAi" kind="show" id="LnD-hg-5AX"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -102,6 +105,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1117" y="372"/>
+        </scene>
+        <!--Video Detail-->
+        <scene sceneID="MBZ-VI-YJY">
+            <objects>
+                <viewController id="lDM-2k-zAi" customClass="VideoDetail" customModule="TwoDirectionalScroller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IuJ-2y-esW"/>
+                        <viewControllerLayoutGuide type="bottom" id="639-B5-uH8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ho1-c4-sbw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xei-1i-ELD">
+                                <rect key="frame" x="20" y="84" width="120" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xei-1i-ELD" secondAttribute="height" multiplier="3:4" id="H7G-dW-Ge2"/>
+                                    <constraint firstAttribute="width" constant="120" id="tcD-0k-rdu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flR-0K-11t">
+                                <rect key="frame" x="150" y="84" width="430" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xv6-w4-scY">
+                                <rect key="frame" x="150" y="112.5" width="430" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="flR-0K-11t" firstAttribute="leading" secondItem="xei-1i-ELD" secondAttribute="trailing" constant="10" id="LEY-SX-uNz"/>
+                            <constraint firstItem="Xv6-w4-scY" firstAttribute="top" secondItem="flR-0K-11t" secondAttribute="bottom" constant="8" id="MS4-Hj-EBB"/>
+                            <constraint firstItem="Xv6-w4-scY" firstAttribute="leading" secondItem="xei-1i-ELD" secondAttribute="trailing" constant="10" id="Voq-nu-vw3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="flR-0K-11t" secondAttribute="trailing" id="cvt-aC-lZ3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xv6-w4-scY" secondAttribute="trailing" id="e6m-3i-Pwq"/>
+                            <constraint firstItem="flR-0K-11t" firstAttribute="top" secondItem="xei-1i-ELD" secondAttribute="top" id="k6r-YA-juR"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="xei-1i-ELD" secondAttribute="leading" id="r6K-bc-eD0"/>
+                            <constraint firstItem="xei-1i-ELD" firstAttribute="top" secondItem="IuJ-2y-esW" secondAttribute="bottom" constant="20" id="rGl-sP-CYE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="xei-1i-ELD" id="Tbx-69-42N"/>
+                        <outlet property="movieDescription" destination="Xv6-w4-scY" id="pOq-Sv-DNq"/>
+                        <outlet property="movieName" destination="flR-0K-11t" id="iz3-VU-Pri"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvb-nr-bph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1783" y="372"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1OO-bF-N90">

@@ -13,6 +13,7 @@ import AlamofireImage
 class Movie {
     var name:String
     var imageURL:String
+    var movieDescription:String
     
     func updateImageURL(){
         RouterService.sharedInstance.fetchMovie(name) { success, movie in
@@ -21,6 +22,7 @@ class Movie {
             }
             self.imageURL = movie.imageURL
             self.name = movie.name
+            self.movieDescription = movie.movieDescription
         }
     }
 
@@ -28,12 +30,14 @@ class Movie {
     init(name: String){
         self.name = name
         self.imageURL = ""
+        self.movieDescription = ""
         updateImageURL()
     }
     
     // Supplying imageURL, so assuming a valid URL is supplied.
-    init(name: String, imageURL: String){
+    init(name: String, imageURL: String, movieDescription: String){
         self.name = name
         self.imageURL = imageURL
+        self.movieDescription = movieDescription
     }
 }

@@ -16,6 +16,14 @@ class ViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let videoCell = sender as? VideoCell,
+        let videoDetailPage = segue.destinationViewController as? VideoDetail {
+            let movie = videoCell.movie
+            videoDetailPage.movie = movie
+        }
+    }
 }
 
 extension ViewController : UITableViewDelegate { }

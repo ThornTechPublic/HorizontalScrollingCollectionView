@@ -53,7 +53,8 @@ class RouterService : NSObject {
                 let json = JSON(dataValue)
                 let imageURL = json["Poster"].stringValue
                 let title = json["Title"].stringValue
-                let movie = Movie(name: title, imageURL: imageURL)
+                let movieDescription = json["Plot"].stringValue
+                let movie = Movie(name: title, imageURL: imageURL, movieDescription: movieDescription)
                 callback( true, movie )
             }
     }

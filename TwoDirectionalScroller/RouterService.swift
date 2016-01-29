@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class RouterService : NSObject {
     
@@ -45,9 +46,14 @@ class RouterService : NSObject {
         ]
         request(Router.FetchMovie(params: parameters))
             .responseJSON() { response in
-                guard let dataValue = response.result.value else { return }
-                print("dataValue: \(dataValue)")
-                callback( true, nil )
+                guard let dataValue = response.result.value else {
+                    callback( false, nil )
+                    return
+                }
+                let json = JSON(dataValue)
+                let imageURL = json["Poster"].stringValue
+                let movie = Movie(imageURL: imageURL)
+                callback( true, movie )
             }
     }
 }

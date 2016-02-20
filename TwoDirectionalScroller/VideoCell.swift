@@ -11,4 +11,13 @@ import UIKit
 class VideoCell : UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var placeholderLabel: UILabel!
+    var cellNumber:String? = nil {
+        didSet {
+            if let cellNumber = cellNumber {
+                placeholderLabel?.text = cellNumber
+            }
+        }
+    }
+    
 }

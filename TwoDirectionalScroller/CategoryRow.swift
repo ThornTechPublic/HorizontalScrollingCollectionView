@@ -10,6 +10,21 @@ import UIKit
 
 class CategoryRow : UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    override func drawRect(rect: CGRect) {
+        super.drawRect(rect)
+        scrollToBeginning()
+    }
+    
+    override func prepareForReuse() {
+        scrollToBeginning()
+    }
+    
+    func scrollToBeginning(){
+        guard collectionView.numberOfItemsInSection(0) > 0 else { return }
+        let indexPath = NSIndexPath(forItem: 0, inSection: 0)
+        collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: .Left, animated: false)
+    }
 }
 
 extension CategoryRow : UICollectionViewDataSource {
@@ -20,9 +35,10 @@ extension CategoryRow : UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("videoCell", forIndexPath: indexPath) as! VideoCell
+        cell.cellNumber = "\(indexPath.row)"
         return cell
     }
-    
+
 }
 
 extension CategoryRow : UICollectionViewDelegateFlowLayout {

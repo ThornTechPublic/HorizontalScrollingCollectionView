@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC9609001CAD81C10053CD31 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9608FF1CAD81C10053CD31 /* MainViewController.swift */; };
+		FC9609021CAD81DD0053CD31 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9609011CAD81DD0053CD31 /* MenuViewController.swift */; };
+		FC9609041CAD81EC0053CD31 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9609031CAD81EC0053CD31 /* Interactor.swift */; };
+		FC9609061CAD81FC0053CD31 /* MenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9609051CAD81FC0053CD31 /* MenuHelper.swift */; };
+		FC9609081CAD820E0053CD31 /* PresentMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9609071CAD820E0053CD31 /* PresentMenuAnimator.swift */; };
+		FC96090A1CAD82210053CD31 /* DismissMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9609091CAD82210053CD31 /* DismissMenuAnimator.swift */; };
 		FCC4C7811B51BA41008CD338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC4C7801B51BA41008CD338 /* AppDelegate.swift */; };
 		FCC4C7831B51BA41008CD338 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC4C7821B51BA41008CD338 /* ViewController.swift */; };
 		FCC4C7861B51BA41008CD338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC4C7841B51BA41008CD338 /* Main.storyboard */; };
@@ -57,6 +63,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FC9608FF1CAD81C10053CD31 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FC9609011CAD81DD0053CD31 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		FC9609031CAD81EC0053CD31 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		FC9609051CAD81FC0053CD31 /* MenuHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHelper.swift; sourceTree = "<group>"; };
+		FC9609071CAD820E0053CD31 /* PresentMenuAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentMenuAnimator.swift; sourceTree = "<group>"; };
+		FC9609091CAD82210053CD31 /* DismissMenuAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissMenuAnimator.swift; sourceTree = "<group>"; };
 		FCC4C77B1B51BA41008CD338 /* TwoDirectionalScroller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoDirectionalScroller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC4C77F1B51BA41008CD338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC4C7801B51BA41008CD338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +146,12 @@
 				FCD240431C5BCB1200B2F4A1 /* Genre.swift */,
 				FCD240451C5BCB6D00B2F4A1 /* Catalog.swift */,
 				FCD240471C5BE4EE00B2F4A1 /* VideoDetail.swift */,
+				FC9608FF1CAD81C10053CD31 /* MainViewController.swift */,
+				FC9609011CAD81DD0053CD31 /* MenuViewController.swift */,
+				FC9609031CAD81EC0053CD31 /* Interactor.swift */,
+				FC9609051CAD81FC0053CD31 /* MenuHelper.swift */,
+				FC9609071CAD820E0053CD31 /* PresentMenuAnimator.swift */,
+				FC9609091CAD82210053CD31 /* DismissMenuAnimator.swift */,
 				FCC4C7841B51BA41008CD338 /* Main.storyboard */,
 				FCC4C7871B51BA41008CD338 /* Images.xcassets */,
 				FCC4C7891B51BA41008CD338 /* LaunchScreen.xib */,
@@ -269,12 +287,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC9609061CAD81FC0053CD31 /* MenuHelper.swift in Sources */,
 				FCC4C7831B51BA41008CD338 /* ViewController.swift in Sources */,
+				FC9609021CAD81DD0053CD31 /* MenuViewController.swift in Sources */,
+				FC9609041CAD81EC0053CD31 /* Interactor.swift in Sources */,
 				FCD240391C5BC25F00B2F4A1 /* Movie.swift in Sources */,
+				FC9609081CAD820E0053CD31 /* PresentMenuAnimator.swift in Sources */,
 				FCD240461C5BCB6D00B2F4A1 /* Catalog.swift in Sources */,
 				FCD240481C5BE4EE00B2F4A1 /* VideoDetail.swift in Sources */,
 				FCC4C7A31B51BBF0008CD338 /* VideoCell.swift in Sources */,
 				FCC4C7A11B51BAC4008CD338 /* CategoryRow.swift in Sources */,
+				FC96090A1CAD82210053CD31 /* DismissMenuAnimator.swift in Sources */,
+				FC9609001CAD81C10053CD31 /* MainViewController.swift in Sources */,
 				FCC4C7811B51BA41008CD338 /* AppDelegate.swift in Sources */,
 				FCD240441C5BCB1200B2F4A1 /* Genre.swift in Sources */,
 			);

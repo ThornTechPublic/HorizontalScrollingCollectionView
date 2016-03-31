@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: MainViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
         if let videoCell = sender as? VideoCell,
         let videoDetailPage = segue.destinationViewController as? VideoDetail {
             let movie = videoCell.movie

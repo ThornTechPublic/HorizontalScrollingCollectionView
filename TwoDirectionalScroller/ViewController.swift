@@ -2,6 +2,12 @@ import UIKit
 
 class ViewController: UIViewController {
     var categories = ["Action", "Drama", "Science Fiction", "Kids", "Horror"]
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let selectedCell = sender as? VideoCell {
+            print("sender is the Video Cell")
+        }
+    }
 }
 
 extension ViewController : UITableViewDelegate { }
